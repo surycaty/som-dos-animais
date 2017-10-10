@@ -12,6 +12,12 @@ public class Animal {
 
     private int idImagem;
 
+    public Animal(String nome, int idSom, int idImagem) {
+        this.nome = nome;
+        this.idSom = idSom;
+        this.idImagem = idImagem;
+    }
+
     public String getNome() {
         return nome;
     }

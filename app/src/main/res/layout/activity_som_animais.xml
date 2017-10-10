@@ -7,10 +7,11 @@
     tools:context="com.surycaty.somdosanimais.SomAnimaisActivity">
 
     <GridLayout
+        android:id="@+id/gridAnimais"
         android:layout_width="0dp"
         android:layout_height="495dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="10dp">
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <ImageButton
             android:id="@+id/imgButton01"

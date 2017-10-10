@@ -2,12 +2,70 @@ package com.surycaty.somdosanimais;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.GridLayout;
+import android.widget.ImageButton;
+
+import com.surycaty.somdosanimais.dao.AnimalDAO;
+import com.surycaty.somdosanimais.entidade.Animal;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class SomAnimaisActivity extends AppCompatActivity {
+
+    private List<Animal> animais = new ArrayList<Animal>();
+    private boolean[] btnClicado = {false, false, false, false};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_som_animais);
+
+        animais = AnimalDAO.getListaAnimais();
+        Collections.shuffle(animais);
+
+        GridLayout grid = new GridLayout(getApplicationContext());
+        grid.setAlignmentMode(GridLayout.ALIGN_MARGINS);
+        //grid.setTextAlignment();
+
+        ImageButton img1 = (ImageButton) findViewById(R.id.imgButton01);
+        img1.setImageResource(animais.get(0).getIdImagem());
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.setEnabled(false);
+            }
+        });
+
+        ImageButton img2 = (ImageButton) findViewById(R.id.imgButton02);
+        img2.setImageResource(animais.get(1).getIdImagem());
+        img2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.setEnabled(false);
+            }
+        });
+
+        ImageButton img3 = (ImageButton) findViewById(R.id.imgButton03);
+        img3.setImageResource(animais.get(2).getIdImagem());
+        img3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.setEnabled(false);
+            }
+        });
+
+        ImageButton img4 = (ImageButton) findViewById(R.id.imgButton04);
+        img4.setImageResource(animais.get(3).getIdImagem());
+        img4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.setEnabled(false);
+            }
+        });
+
+
     }
 }

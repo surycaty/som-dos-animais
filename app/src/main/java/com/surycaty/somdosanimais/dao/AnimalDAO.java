@@ -16,25 +16,15 @@ public class AnimalDAO {
 
         List<Animal> animals = new ArrayList<Animal>();
 
-        animals.add(new Animal("Cachorro", 0, R.drawable.cachorro));
-
-        animals.add(new Animal("Elefante", 0, R.drawable.elefante));
-
-        animals.add(new Animal("Galinha", 0, R.drawable.galinha));
-
-        animals.add(new Animal("Gato", 0, R.drawable.gato));
-
-        animals.add(new Animal("Macaco", 0, R.drawable.macaco));
-
-        animals.add(new Animal("Pato", 0, R.drawable.pato));
-
-        animals.add(new Animal("Pintinho", 0, R.drawable.pintinho));
-
-        animals.add(new Animal("Porco", 0, R.drawable.porco));
-
-        animals.add(new Animal("Sapo", 0, R.drawable.sapo));
-
-        animals.add(new Animal("Vaca", 0, R.drawable.vaca));
+        animals.add(new Animal("cachorro", R.raw.cachorro, R.drawable.cachorro));
+        animals.add(new Animal("elefante", R.raw.elefante, R.drawable.elefante));
+        animals.add(new Animal("galinha", R.raw.galinha, R.drawable.galinha));
+        animals.add(new Animal("gato", R.raw.gato, R.drawable.gato));
+        //animals.add(new Animal("ovelha", R.raw.ovelha, R.drawable.ovelha));
+        animals.add(new Animal("pato", R.raw.pato, R.drawable.pato));
+        animals.add(new Animal("porco", R.raw.porco, R.drawable.porco));
+        animals.add(new Animal("sapo", R.raw.sapo, R.drawable.sapo));
+        animals.add(new Animal("vaca", R.raw.vaca, R.drawable.vaca));
 
         return animals;
     }

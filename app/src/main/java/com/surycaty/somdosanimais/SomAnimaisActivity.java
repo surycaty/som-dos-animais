@@ -1,5 +1,8 @@
 package com.surycaty.somdosanimais;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,6 +39,16 @@ public class SomAnimaisActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.setEnabled(false);
+
+                btnClicado[0] = true;
+
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), animais.get(0).getIdSom());
+                mp.start();
+
+                if (btnClicado[0] && btnClicado[1] && btnClicado[2] && btnClicado[3]) {
+                    Intent it = new Intent(SomAnimaisActivity.this, SomAnimaisActivity.class);
+                    startActivity(it);
+                }
             }
         });
 
@@ -45,6 +58,16 @@ public class SomAnimaisActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.setEnabled(false);
+
+                btnClicado[1] = true;
+
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), animais.get(1).getIdSom());
+                mp.start();
+
+                if (btnClicado[0] && btnClicado[1] && btnClicado[2] && btnClicado[3]) {
+                    Intent it = new Intent(SomAnimaisActivity.this, SomAnimaisActivity.class);
+                    startActivity(it);
+                }
             }
         });
 
@@ -54,6 +77,16 @@ public class SomAnimaisActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.setEnabled(false);
+
+                btnClicado[2] = true;
+
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), animais.get(2).getIdSom());
+                mp.start();
+
+                if (btnClicado[0] && btnClicado[1] && btnClicado[2] && btnClicado[3]) {
+                    Intent it = new Intent(SomAnimaisActivity.this, SomAnimaisActivity.class);
+                    startActivity(it);
+                }
             }
         });
 
@@ -63,6 +96,16 @@ public class SomAnimaisActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.setEnabled(false);
+
+                btnClicado[3] = true;
+
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), animais.get(3).getIdSom());
+                mp.start();
+
+                if (btnClicado[0] && btnClicado[1] && btnClicado[2] && btnClicado[3]) {
+                    Intent it = new Intent(SomAnimaisActivity.this, SomAnimaisActivity.class);
+                    startActivity(it);
+                }
             }
         });
 

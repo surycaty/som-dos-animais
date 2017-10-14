@@ -21,6 +21,7 @@ public class SomAnimaisActivity extends AppCompatActivity {
     private List<Animal> animais = new ArrayList<Animal>();
     private boolean[] btnClicado = {false, false, false, false};
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,7 @@ public class SomAnimaisActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.setEnabled(false);
+                ((ImageButton)view).setImageResource(animais.get(0).getIdImagemClicado());
 
                 btnClicado[0] = true;
 
@@ -46,8 +48,8 @@ public class SomAnimaisActivity extends AppCompatActivity {
                 mp.start();
 
                 if (btnClicado[0] && btnClicado[1] && btnClicado[2] && btnClicado[3]) {
-                    Intent it = new Intent(SomAnimaisActivity.this, SomAnimaisActivity.class);
-                    startActivity(it);
+                    finish();
+                    startActivity(getIntent());
                 }
             }
         });
@@ -58,6 +60,7 @@ public class SomAnimaisActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.setEnabled(false);
+                ((ImageButton) view).setImageResource(animais.get(1).getIdImagemClicado());
 
                 btnClicado[1] = true;
 
@@ -65,8 +68,8 @@ public class SomAnimaisActivity extends AppCompatActivity {
                 mp.start();
 
                 if (btnClicado[0] && btnClicado[1] && btnClicado[2] && btnClicado[3]) {
-                    Intent it = new Intent(SomAnimaisActivity.this, SomAnimaisActivity.class);
-                    startActivity(it);
+                    finish();
+                    startActivity(getIntent());
                 }
             }
         });
@@ -77,6 +80,7 @@ public class SomAnimaisActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.setEnabled(false);
+                ((ImageButton) view).setImageResource(animais.get(2).getIdImagemClicado());
 
                 btnClicado[2] = true;
 
@@ -84,8 +88,8 @@ public class SomAnimaisActivity extends AppCompatActivity {
                 mp.start();
 
                 if (btnClicado[0] && btnClicado[1] && btnClicado[2] && btnClicado[3]) {
-                    Intent it = new Intent(SomAnimaisActivity.this, SomAnimaisActivity.class);
-                    startActivity(it);
+                    finish();
+                    startActivity(getIntent());
                 }
             }
         });
@@ -96,6 +100,7 @@ public class SomAnimaisActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.setEnabled(false);
+                ((ImageButton) view).setImageResource(animais.get(3).getIdImagemClicado());
 
                 btnClicado[3] = true;
 
@@ -103,8 +108,8 @@ public class SomAnimaisActivity extends AppCompatActivity {
                 mp.start();
 
                 if (btnClicado[0] && btnClicado[1] && btnClicado[2] && btnClicado[3]) {
-                    Intent it = new Intent(SomAnimaisActivity.this, SomAnimaisActivity.class);
-                    startActivity(it);
+                    finish();
+                    startActivity(getIntent());
                 }
             }
         });

@@ -12,10 +12,13 @@ public class Animal {
 
     private int idImagem;
 
-    public Animal(String nome, int idSom, int idImagem) {
+    private int idImagemClicado;
+
+    public Animal(String nome, int idSom, int idImagem, int idImagemClicado) {
         this.nome = nome;
         this.idSom = idSom;
         this.idImagem = idImagem;
+        this.idImagemClicado = idImagemClicado;
     }
 
     public String getNome() {
@@ -41,4 +44,13 @@ public class Animal {
     public void setIdImagem(int idImagem) {
         this.idImagem = idImagem;
     }
+
+    public int getIdImagemClicado() {
+        return idImagemClicado;
+    }
+
+    public void setIdImagemClicado(int idImagemClicado) {
+        this.idImagemClicado = idImagemClicado;
+    }
+
 }
